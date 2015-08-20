@@ -187,14 +187,16 @@ function typeCurrentSafariURL()
     end
 end
 
--- Hints
+-- Hints  非常赞的功能，类似图拉鼎同学的Monico 
 hs.hotkey.bind(hyper, ';', function() 
     hs.hints.windowHints(getAllValidWindows()) 
 end)
 
--- undo
+-- undo  
 local undo = require 'undo'
 hs.hotkey.bind(hyper, 'z', function() undo:undo() end)
+
+-- 这里使用了宋辰文同学的方向控制函数，感谢
 -- Move Window
 function horizontalMove(direction)
     local w = hs.window.focusedWindow()
